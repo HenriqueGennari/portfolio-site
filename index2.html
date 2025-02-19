@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>PortfolioBackUp</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
+
     <nav class="nav-bar">
         <div class="nav-bar-content">
-            <h1><a href="#header">HGennari</a></h1>
+            <h1><a href="#">HGennari</a></h1>
                 <ul>
-                    <li class="nav-item"><a href="#header">Início</a></li>
+                    <li class="nav-item"><a href="#">Início</a></li>
                     <li class="nav-item"><a href="#about">Sobre mim</a></li>
                     <li class="nav-item"><a href="#projects">Projetos</a></li>
                     <li class="nav-item"><a href="#">Serviços</a></li>
@@ -20,9 +21,51 @@
         </div>
     </nav>
 
-
     <header id="header">
-        <div class="header-left">
+        <div class="main-content">
+            <p>Olá, eu sou o...</p>
+            <h2>Henrique Gennari Lemgurber</h2>
+            <div class="animacaoTexto">
+                <p id="text"></p>
+                <span class="cursor"></span>
+            </div>
+        </div>
+        <div class="redes-sociais"><!--substitui o ul, pq eu prefiro-->
+            <li><!--lista-->
+                <a href="https://www.linkedin.com/in/henriquegennari/" target="_blank"> <!--link da resde social-->
+                    <div class="aumentar"> <!--div que faz a animação mouseout-->
+                        <img src="imagens/logotipo-do-linkedin.png" alt=""><!--animação-->
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/_.gennari/" target="_blank">
+                    <div class="aumentar">
+                       
+                        <img src="imagens/instagram.png" alt="">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/HenriqueGennari" target="_blank">
+                    <div class="aumentar">
+                        <img src="imagens/placa-do-github.png" alt="">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@gennari-7" target="_blank">
+                    <div class="aumentar">
+                        <img src="imagens/youtube.png" alt="">
+                    </div>
+                </a>
+            </li>
+        </div>
+
+    </header>
+
+    <section id="about">
+        <div class="about-left">
             <h1>Olá, Sou o  Henrique Desenvolvedor <p id="mod">FullStack</p></h1>
             <p>Sou estudante de Análise e Desenvolvimento de sistemas e desenvolvedor de WebServices utilizando todo o repertório que tenho disponível para torna-las úteis, estáveis e adaptáveis.</p>
 
@@ -31,83 +74,19 @@
             </a>
         </div>
 
-        <div class="header-right">
-            <div class="header-img">
+        <div class="about-right">
+            <div class="about-img">
                 <img src="imagens/foto.jpg" alt="" class="eu">
             </div>
         </div>
-    </header>
-
-    <section id="about">
-        <div class="about-left">
-            <h2>Além do código: quem sou eu?</h2>
-            <p>
-                Convido você a me conhecer melhor nas redes sociais abaixo.
-            </p>
-
-            <!--BAGUNÇA ORGANIZADA -- ANIMAÇÃO-->
-
-            <div class="redes-sociais"><!--substitui o ul, pq eu prefiro-->
-                <li><!--lista-->
-                    <a href="https://www.linkedin.com/in/henriquegennari/" target="_blank"> <!--link da resde social-->
-                        <div class="aumentar"> <!--div que faz a animação mouseout-->
-                            <img src="imagens/logotipo-do-linkedin.png" alt=""><!--animação-->
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/_.gennari/" target="_blank">
-                        <div class="aumentar">
-                           
-                            <img src="imagens/instagram.png" alt="">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/HenriqueGennari" target="_blank">
-                        <div class="aumentar">
-                            <img src="imagens/placa-do-github.png" alt="">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/@gennari-7" target="_blank">
-                        <div class="aumentar">
-                            <img src="imagens/youtube.png" alt="">
-                        </div>
-                    </a>
-                </li>
-            </div>
-        </div>
-        <div class="about-right">
-            <h2>Desenvolvedor Full-Stack</h2>
-            <p>
-                Muito prazer! Eu sou o Henrique, tenho 18 anos de idade e sou fascinado pela programação. Curso Análise e Desenvolvimento de Sistemas e no momento busco uma oportunidade de poder aplicar meus conhecimentos. Falei pouco? Entre em contato comigo se gostou!
-            </p>
-        </div>
     </section>
 
-    <section id="projects" class="projects">
-        <div class="projects-content">
-            <h2>Projetos</h2>
-            <p class="descricao">
-                Projetos feitos para pôr em prática todo o meu conhceimento juntamente com suas tecnologias.
-            </p>
-        </div>
-        <div class="projects-content-projetos">
-            <div id="p1">
-                <p></p>
-            </div>
-            <div id="p2">
-                <p></p>
-            </div>
-            <div id="p3">
-                <p></p>
-            </div>
-            <div id="p4">
-                <p></p>
-            </div>
-        </div>
+    <section id="">
+    
+    </section>
+
+    <section id="projects">
+        <h1>PROJETOS</h1>
     </section>
 
     <footer id="footer">
@@ -115,5 +94,6 @@
     </footer>
 
     <script src="menu.js"></script>
+    <script src="TextoEfeito.js"></script>
 </body>
 </html>

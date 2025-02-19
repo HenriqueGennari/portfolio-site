@@ -11,6 +11,7 @@
     --cor02: #4D5159;
     --cor03:  #FF0000;
     --corPurple: #9800ce;
+    --corSite: #28323C;
     --fonte01: "Poppins", serif;
     --fonte02: "Inter", serif
 }
@@ -34,6 +35,7 @@ a{
     background-color: rgb(226, 224, 224);
     padding-bottom: 0px;
     transition: 0.5s;
+    box-shadow: 0px 0px 8px #333;
 }
 .nav-bar.rolagem{
     box-shadow: 0px 0px 8px #333;
@@ -73,7 +75,51 @@ a{
 
 /*HEADER*/
 
-header{
+section.header2{
+    margin-top: 10rem;
+    height: 80vh;
+}
+section.header2 > div.main-content{
+    padding-top: 10rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #0E1626;
+}
+section.header2 > div.main-content > p{
+    margin: 10px 40px;
+    font-size: 1.5rem;
+
+}
+section.header2 > div.main-content > h1{
+    margin: 30px;
+    font-size: 5rem;
+}
+section.header2 > div.main-content > h2{
+    margin: 10px;
+    font-size: 2.7rem;
+}
+/*TEXTO ANIMADO*/
+.animacaoTexto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+p#text{
+    font-size: 4.1rem;
+}
+.cursor{
+    width: 5px;
+    height: 50px;
+    background-color: var(--cor02);
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
+header#header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,22 +128,22 @@ header{
     height: 80vh;
 }
 
-header .header-left{
+header#header.header-left{
     max-width: 62rem;
     /*flex: 1;*/
 }
- header .header-left > h1{
+ header#header .header-left > h1{
     color: var(--cor01);
     font-size: 3em;
     margin: 10px;
     padding: 10px;
     width: 600px;
 }
-header .header-left > h1 > p#mod{
+header#header .header-left > h1 > p#mod{
     color: var(--cor02);
     display: inline-block;
 }
-header .header-left >  p {
+header#header .header-left >  p {
     margin: 10px;
     padding: 10px;
     max-width: 30rem;
@@ -118,7 +164,7 @@ header .header-left >a p#cv {
     color: white;
     font-size: 1.5rem;
 }
-header .header-left >a p#cv::after {
+header#header .header-left >a p#cv::after {
     content: "";
     z-index: -1;
     position: absolute;
@@ -129,7 +175,7 @@ header .header-left >a p#cv::after {
     top: 0;
     border-radius: 10px;
 }
-header .header-left > a p#cv::before {
+header#header .header-left > a p#cv::before {
     content: "";
   background-color: var(--cor02);
   position: absolute;
@@ -144,7 +190,7 @@ header .header-left > a p#cv::before {
   border-radius: 10px;
   opacity: 0;
 }
-header .header-left >a p#cv:hover::before {
+header#header .header-left >a p#cv:hover::before {
     opacity: 1;
 }
 p:active:after {
@@ -156,15 +202,15 @@ p:active:after {
     100% {background-position: 0 0;}
 }
 
-header .header-right{
+header#header .header-right{
     padding-right: 300px;
     padding-top: 200px;
 }
-header .header-right .header-img{
+header#header .header-right .header-img{
     position: relative;
     line-height: 0;
 }
-header .header-right .header-img::before{
+header#header .header-right .header-img::before{
     content: '';
     display: block;
     width: 100%;
@@ -176,7 +222,7 @@ header .header-right .header-img::before{
     border-radius: 0.5rem;
     z-index: -1;
 }
-header .header-right .header-img .eu{
+header#header .header-right .header-img .eu{
     border-radius: 0.5rem;
     min-width: 26rem;
     max-width: 100%;

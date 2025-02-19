@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito de Digitação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            display: flex;
+        }
+        #text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .cursor {
+            margin-top: 25px;
+            width: 5px;
+            height: 24px;
+            background-color: rgb(48, 35, 35);
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p id="text">TESTE</p>
+        <span class="cursor"></span>
+    </div>
+
+    <script>
+        const textElement = document.getElementById('text');
+        const words = ["Desenvolvedor", "Web Designer", "Programador", "Freelancer"];
+        let wordIndex = 0;
+        let letterIndex = 0;
+        let isDeleting = false;
+
+        const typingSpeed = 200;
+        const erasingSpeed = 100;
+        const delayBetweenWords = 1500;
+
+        function type() {
+            const currentWord = words[wordIndex]; //palavra
+            const currentText = currentWord.substring(0, letterIndex); //letra
+            
+            textElement.textContent = currentText; //escrevendo letra no html
+
+            if (!isDeleting && letterIndex < currentWord.length) {
+                letterIndex++;
+                setTimeout(type, typingSpeed);
+            } else if (isDeleting && letterIndex > 0) {
+                letterIndex--;
+                setTimeout(type, erasingSpeed);
+            } else {
+                isDeleting = !isDeleting;
+                if (!isDeleting) {
+                    wordIndex = (wordIndex + 1) % words.length;
+                    //wordIndex = wordIndex < words.length ? wordIndex++ : 0
+                }
+                setTimeout(type, delayBetweenWords);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, typingSpeed);
+        });
+    </script>
+
+</body>
+</html>
