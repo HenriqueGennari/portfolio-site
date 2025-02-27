@@ -1,12 +1,12 @@
 const textElement = document.getElementById('text');
-        const words = ["Desenvolvedor","Front-end","Back-end","Web Developer", "Freelancer"];
+        const words = ["Desenvolvedor","Front-end","Back-end","Freelancer"];
         let wordIndex = 0;
         let letterIndex = 0;
         let isDeleting = false;
 
         const typingSpeed = 200;
         const erasingSpeed = 100;
-        const delayBetweenWords = 1700;
+        const delayBetweenWords = 1300;
 
         function type() {
             const currentWord = words[wordIndex]; //palavra
