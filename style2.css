@@ -175,56 +175,34 @@ section#about .about-left >  p {
 
 /*Animação cv*/
 
-section .about-left >a p#cv {
-    margin: 30px;
-    margin-right: 0px;
-    padding: 10px 30px;
-    position: relative;
-    z-index: 1;
-    border: none;
-    width: 100px;
-    padding-right: 0px;
+
+#baixarCv, #cv{
+    display: flex;
+    text-decoration: none;
     color: white;
-    font-size: 1.5rem;
-}
-section#about .about-left >a p#cv::after {
-    content: "";
-    z-index: -1;
-    position: absolute;
     background-color: var(--cor02);
     width: 150px;
     height: 50px;
-    left: 0;
-    top: 0;
     border-radius: 10px;
+    margin: 30px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease
 }
-section#about .about-left > a p#cv::before {
-    content: "";
-  background-color: var(--cor02);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  z-index: -1;
-  width: 160px;
-  height: 50px;
-  filter: blur(10px);
-  animation: glowing 20s linear infinite;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
-  opacity: 0;
+#cv:hover{
+    transform: scale(1.1);
 }
-section#about .about-left >a p#cv:hover::before {
-    opacity: 1;
+#baixarCv:hover{
+    transform: scale(1.1);
 }
-p:active:after {
-    background: transparent;
+.curriculo{
+    width: 400px;
+    display: flex;
 }
-@keyframes glowing {
-    0% {background-position: 0 0;}
-    50% {background-position: 400% 0;}
-    100% {background-position: 0 0;}
-}
-
 /*Fim da Animação cv*/
 
 section#about .about-right{
