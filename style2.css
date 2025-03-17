@@ -269,7 +269,6 @@ section#projects{
     padding-top: 30px ;
 }
 .space-cards{
-    border: 1px solid red;
     height: 700px;
     display: flex;
 }
@@ -279,4 +278,7 @@ section#projects{
     border-radius: 10px;
     height: 400px;
     width: 350px;
+}
+footer{
+    text-align: center;
 }
