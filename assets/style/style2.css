@@ -143,8 +143,6 @@ p#text{
 /*SECTION SOBRE AQUELES QUEM VOS FALA*/
 
 
-
-
 section#about{
     display: flex;
     justify-content: space-between;
@@ -201,7 +199,6 @@ section#about .about-left >  p {
     width: 400px;
     display: flex;
 }
-/*Fim da Animação cv*/
 
 section#about .about-right{
     padding-right: 300px;
@@ -246,9 +243,6 @@ section#projects h1{
     display: flex;
     align-items: center;
 }
-.conatainer-cards{
-    
-}
 .card{
     margin: 0px 50px;
     width: 460px;
@@ -257,10 +251,10 @@ section#projects h1{
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
     background-color: white;
-    box-shadow: 4px 4px 7px rgb(99, 97, 97);
+    box-shadow: 7px 7px 5px var(--cor01);
 }
 .card:hover{
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 .imagem-projeto{
     height: 50%;
@@ -286,8 +280,9 @@ section#projects h1{
 }
 .nome-projeto p {
     font-family: var(--fonte02);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
+    color: #28323C;
 }
 .oque-projeto{
     color: black;
@@ -313,7 +308,7 @@ section#projects h1{
     color: white;
     margin-right: 10px;
     border: 1px solid rgba(0, 0, 0, 0.288);
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #28323C;
     padding: 6px;
 }
@@ -333,6 +328,10 @@ section#projects h1{
     border-radius: 10px;
     padding: 10px;
     background-color: rgba(189, 189, 189, 0.521);
+    transition: box-shadow 0.5s ease-in-out ;
+}
+.github:hover{
+    box-shadow: 7px 7px 10px;
 }
 .previa{
     display: flex;
@@ -341,8 +340,11 @@ section#projects h1{
     border-radius: 10px;
     padding: 10px; 
     background-color: rgba(189, 189, 189, 0.521);
+    transition: box-shadow 0.5s ease-in-out ;
 }
-
+.previa:hover{
+    box-shadow: 7px 7px 10px;
+}
 .github p a{
     color: black;
     display: flex;
